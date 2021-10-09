@@ -1,2 +1,2 @@
-require("SummarizedExperiment") || stop("unable to load SummarizedExperiment package")
-SummarizedExperiment:::.test()
+require("SummarizedExperimentGHA") || stop("unable to load SummarizedExperimentGHA package")
+SummarizedExperimentGHA:::.test()

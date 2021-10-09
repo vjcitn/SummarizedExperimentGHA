@@ -81,12 +81,12 @@ in a `RangedSummarizedExperiment` object which contains 8 different
 experimental and assays 64,102 gene transcripts.
 
 ```{r, echo=FALSE}
-suppressPackageStartupMessages(library(SummarizedExperiment))
+suppressPackageStartupMessages(library(SummarizedExperimentGHA))
 suppressPackageStartupMessages(data(airway, package="airway"))
 ```
 
 ```{r}
-library(SummarizedExperiment)
+library(SummarizedExperimentGHA)
 data(airway, package="airway")
 se <- airway
 se

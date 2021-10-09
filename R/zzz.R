@@ -1,2 +1,2 @@
-.test <- function() BiocGenerics:::testPackage("SummarizedExperiment")
+.test <- function() BiocGenerics:::testPackage("SummarizedExperimentGHA")
 

@@ -17,7 +17,7 @@ knitr::opts_chunk$set(error=FALSE, warning=FALSE, message=FALSE)
 ```
 
 ```{r, echo=FALSE}
-library(SummarizedExperiment)
+library(SummarizedExperimentGHA)
 library(testthat)
 ```
 
@@ -599,7 +599,7 @@ setMethod("[", "ExampleClass", function(x, i, j, drop=TRUE) {
     if (!missing(i)) {
         if (is.character(i)) {
             fmt <- paste0("<", class(x), ">[i,] index out of bounds: %s")
-            i <- SummarizedExperiment:::.SummarizedExperiment.charbound(
+            i <- SummarizedExperimentGHA:::.SummarizedExperiment.charbound(
                 i, rownames(x), fmt
             )
         }
@@ -612,7 +612,7 @@ setMethod("[", "ExampleClass", function(x, i, j, drop=TRUE) {
     if (!missing(j)) {
         if (is.character(j)) {
             fmt <- paste0("<", class(x), ">[,j] index out of bounds: %s")
-            j <- SummarizedExperiment:::.SummarizedExperiment.charbound(
+            j <- SummarizedExperimentGHA:::.SummarizedExperiment.charbound(
                 j, colnames(x), fmt
             )
         }
@@ -653,7 +653,7 @@ setReplaceMethod("[", c("ExampleClass", "ANY", "ANY", "ExampleClass"),
     if (!missing(i)) {
         if (is.character(i)) {
             fmt <- paste0("<", class(x), ">[i,] index out of bounds: %s")
-            i <- SummarizedExperiment:::.SummarizedExperiment.charbound(
+            i <- SummarizedExperimentGHA:::.SummarizedExperiment.charbound(
                 i, rownames(x), fmt
             )
         }
@@ -666,7 +666,7 @@ setReplaceMethod("[", c("ExampleClass", "ANY", "ANY", "ExampleClass"),
     if (!missing(j)) {
         if (is.character(j)) {
             fmt <- paste0("<", class(x), ">[,j] index out of bounds: %s")
-            j <- SummarizedExperiment:::.SummarizedExperiment.charbound(
+            j <- SummarizedExperimentGHA:::.SummarizedExperiment.charbound(
                 j, colnames(x), fmt
             )
         }
