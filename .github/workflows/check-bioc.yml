@@ -53,7 +53,8 @@ jobs:
       matrix:
         config:
           - { os: ubuntu-latest, r: '4.1', bioc: '3.13', cont: "us.gcr.io/anvil-gcr-public/anvil-rstudio-bioconductor:3.13.3", rspm: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest" }
-
+          - { os: windows-latest, r: '4.1', bioc: '3.13'}
+          
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       RSPM: ${{ matrix.config.rspm }}
@@ -147,11 +148,13 @@ jobs:
           message(paste('****', Sys.time(), 'installing BiocManager ****'))
           remotes::install_cran("BiocManager")
         shell: Rscript {0}
-
-      - name: Set BiocVersion
+        
+      - name: Install AnVIL for Windows
+        if: runner.os == 'Windows'
         run: |
-          BiocManager::install(version = "${{ matrix.config.bioc }}", ask = FALSE, site_repository=AnVIL::repositories()["BiocBinaries"])
-          shell: Rscript {0}
+          BiocManager::install("AnVIL")
+          ## Edit below if you have any Windows system dependencies
+        shell: Rscript {0}
 
       - name: Install dependencies pass 1
         run: |
@@ -262,7 +265,6 @@ jobs:
         ## makes the git history recognizable by pkgdown.
 
       - name: Upload check results
-        if: failure()
         uses: actions/upload-artifact@master
         with:
           name: ${{ runner.os }}-biocversion-RELEASE_3_13-r-4.1-results
