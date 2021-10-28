@@ -6,7 +6,7 @@ Description: The SummarizedExperiment container contains one or more assays,
 	represent samples.
 biocViews: Genetics, Infrastructure, Sequencing, Annotation, Coverage,
 	GenomeAnnotation
-Version: 1.23.5003
+Version: 1.23.5004
 License: Artistic-2.0
 Encoding: UTF-8
 Authors@R:
