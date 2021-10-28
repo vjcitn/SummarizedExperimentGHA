@@ -6,14 +6,12 @@ Description: The SummarizedExperiment container contains one or more assays,
 	represent samples.
 biocViews: Genetics, Infrastructure, Sequencing, Annotation, Coverage,
 	GenomeAnnotation
-URL: https://bioconductor.org/packages/SummarizedExperiment
-BugReports: https://github.com/Bioconductor/SummarizedExperiment/issues
-Version: 1.23.5002
+Version: 1.23.5003
 License: Artistic-2.0
 Encoding: UTF-8
 Authors@R:
     person(given = "Bioconductor",
-           family = "Maintainger",
+           family = "Maintainer",
            role = c("aut", "cre"),
            email = "stvjc@channing.harvard.edu"
            )
@@ -40,3 +38,5 @@ Collate: Assays-class.R
 	makeSummarizedExperimentFromLoom.R
 	readKallisto.R
 	zzz.R
+URL: https://vjcitn.github.io/SummarizedExperimentGHA
+BugReports: https://github.com/vjcitn/SummarizedExperimentGHA/issues

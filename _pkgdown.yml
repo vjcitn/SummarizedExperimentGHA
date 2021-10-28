@@ -1,0 +1,15 @@
+url: https://vjcitn.github.io/SummarizedExperimentGHA
+
+template:
+  params:
+    bootswatch: flatly
+
+home:
+  title: "SummarizedExperiment with github actions; prototype"
+  type: inverse
+
+
+navbar:
+  right:
+   - icon: fa-github
+     href: https://github.com/vjcitn/SummarizedExperimentGHA

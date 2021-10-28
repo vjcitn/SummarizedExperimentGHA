@@ -1,0 +1,11 @@
+pandoc: '2.13'
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  Extensions: Extensions.html
+  SummarizedExperiment: SummarizedExperiment.html
+last_built: 2021-10-28T10:36Z
+urls:
+  reference: https://vjcitn.github.io/SummarizedExperimentGHA/reference
+  article: https://vjcitn.github.io/SummarizedExperimentGHA/articles
+
